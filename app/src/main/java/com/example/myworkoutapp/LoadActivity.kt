@@ -12,7 +12,7 @@ class LoadActivity : AppCompatActivity() {
         setContentView(R.layout.activity_load)
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
             finish()
         }, 1000)
