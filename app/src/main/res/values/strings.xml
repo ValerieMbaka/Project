@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">EasyFit</string>
+    <string name="app_title">Easy Fitness</string>
+    <string name="splash_message">Welcome!</string>
+
+    <string name="btn_login">Login</string>
+    <string name="btn_sign_up">Sign Up</string>
+
+    <string name="edt_sign_up">Sign Up Now!</string>
+    <string name="edt_name">Enter your Name</string>
+    <string name="edt_sign_up_email">Type your Email</string>
+    <string name="edt_sign_up_password">Type your Password</string>
+    <string name="edt_sign_up_password_retype">Retype Your Password</string>
+    <string name="edt_registered">Already Registered , Sign In !</string>
+
+    <string name="edt_welcome">Welcome Back</string>
+    <string name="edt_email">Enter your email</string>
+    <string name="edt_password">Enter password</string>
+    <string name="edt_not_registered">Not Registered Yet , Sign Up !</string>
+
+    <string name="home_title">HOME WORKOUT</string>
+    <string name="week_goal">WEEK GOAL</string>
+
+    <string name="full_body">FULL BODY</string>
+    <string name="lower_body">LOWER BODY</string>
+    <string name="leg_workout">LEG WORKOUT</string>
+    <string name="arm_workout">ARM WORKOUT</string>
+    <string name="chest_workout">CHEST WORKOUT</string>
+    <string name="shoulder_workout">SHOULDERS &amp; BACK WORKOUT</string>
+    <string name="discover_more">DISCOVER</string>
+    <string name="challenge">7x4 CHALLENGE</string>
+    <string name="exit">BACK</string>
+
+    <string name="report_ttl">REPORT</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+    <string name="bmi_calculator">BMI CALCULATOR</string>
+    <string name="metric_units">METRIC UNITS</string>
+    <string name="us_units">US UNITS</string>
+    <string name="height">HEIGHT (in cm)</string>
+    <string name="height_ft">HEIGHT (in Feet)</string>
+    <string name="height_inch">HEIGHT (in Inch)</string>
+    <string name="weight">WEIGHT (in Kg)</string>
+    <string name="weight_lbs">WEIGHT (in lbs)</string>
+    <string name="calculate">CALCULATE</string>
+    <string name="bmi_result">YOUR BMI</string>
+    <string name="normal">Normal</string>
+    <string name="def">15.00</string>
+    <string name="go">GO</string>
+
+    <string name="training">Training</string>
+    <string name="report">Report</string>
+    <string name="discover">DISCOVER</string>
+    <string name="more">More workouts</string>
+    <string name="profile">Profile</string>
+</resources>
