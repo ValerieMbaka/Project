@@ -35,6 +35,7 @@
 
     <string name="report_ttl">REPORT</string>
     <string name="calculate_bmi">Calculate BMI</string>
+    <string name="calculate_Bmi">CALCULATE BMI</string>
     <string name="bmi_calculator">BMI CALCULATOR</string>
     <string name="metric_units">METRIC UNITS</string>
     <string name="us_units">US UNITS</string>
@@ -48,6 +49,7 @@
     <string name="normal">Normal</string>
     <string name="def">15.00</string>
     <string name="go">GO</string>
+    <string name="history">VIEW HISTORY</string>
 
     <string name="training">TRAINING</string>
     <string name="report">Report</string>
