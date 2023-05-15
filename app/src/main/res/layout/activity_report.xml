@@ -67,7 +67,7 @@
                     android:id="@+id/bmi_icon"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:src="@drawable/exercises" />
+                    android:src="@drawable/bmi" />
                 <TextView
                     android:id="@+id/mtvCalculateBMI"
                     android:layout_width="wrap_content"
@@ -102,7 +102,7 @@
                     android:id="@+id/history_icon"
                     android:layout_width="75dp"
                     android:layout_height="75dp"
-                    android:src="@drawable/search" />
+                    android:src="@drawable/clock" />
                 <TextView
                     android:id="@+id/mtvHistory"
                     android:layout_width="wrap_content"

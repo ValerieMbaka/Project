@@ -27,4 +27,6 @@
     <color name="bottom_nav_bg">#2FF1DF</color>
     <color name="bottom_nav_item">#1A53BC</color>
     <color name="bottom_nav_selected_item">#2FF1DF</color>
+
+    <color name="history_toolbar">#0535F1</color>
 </resources>

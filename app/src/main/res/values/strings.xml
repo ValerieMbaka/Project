@@ -56,4 +56,10 @@
     <string name="discover">DISCOVER</string>
     <string name="more">More workouts</string>
     <string name="settings">SETTINGS</string>
+
+    <string name="complete_exercises">EXERCISES COMPLETED</string>
+    <string name="no_history">NO DATA AVAILABLE. Please, Perform Workout to View History.</string>
+    <string name="date">DATE</string>
+    <string name="num">1</string>
+
 </resources>
