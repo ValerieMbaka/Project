@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardDiscoverMore"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -18,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="260dp"
             android:layout_marginTop="0dp"
-            android:src="@drawable/discover"/>
+            android:src="@drawable/discover" />
 
         <TextView
             android:id="@+id/mTvDiscover"
@@ -32,15 +33,15 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/mTvMoreWorkouts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/mTvMoreWorkouts"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:padding="@dimen/_8sdp"
             android:text="@string/more"
             android:textColor="@color/white"
-            android:textSize="@dimen/_18sdp"
-            android:padding="@dimen/_8sdp"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_35sdp"/>
+            android:textSize="@dimen/_18sdp" />
 
     </com.google.android.material.card.MaterialCardView>
 

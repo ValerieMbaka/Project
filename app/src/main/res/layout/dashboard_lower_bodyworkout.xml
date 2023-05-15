@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardLowerBody"
         android:layout_width="match_parent"
         android:layout_height="260dp"
         app:cardBackgroundColor="@color/white"
@@ -18,30 +19,30 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="260dp"
-            android:src="@drawable/squats"/>
+            android:src="@drawable/squats" />
 
         <TextView
+            android:id="@+id/mTvLowerBody"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/mTvLowerBody"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:padding="@dimen/_20sdp"
             android:text="@string/lower_body"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="@dimen/_29sdp"
-            android:padding="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_8sdp"/>
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/mTvChallenge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/mTvChallenge"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:padding="@dimen/_20sdp"
             android:text="@string/challenge"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="@dimen/_20sdp"
-            android:padding="@dimen/_20sdp"
-            android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_40sdp"/>
+            android:textStyle="bold" />
 
     </com.google.android.material.card.MaterialCardView>
 
