@@ -17,6 +17,11 @@ class SettingsActivity : AppCompatActivity() {
 
         user = FirebaseAuth.getInstance()
 
+        binding.cardLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.cardLogout.setOnClickListener {
             user.signOut()
             startActivity(
