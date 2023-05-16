@@ -8,7 +8,6 @@ import android.widget.LinearLayout
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.widget.AppCompatEditText
 import com.google.android.material.textfield.TextInputLayout
 import java.math.BigDecimal
@@ -19,7 +18,6 @@ class BMIActivity : AppCompatActivity() {
     private val usUnitsView = "US_UNIT_VIEW"
     private var currentVisibleView: String = metricUnitsVIEW
 
-    private lateinit var toolbarBmiActivity: Toolbar
     private lateinit var btnCalculateUnits: Button
     private lateinit var rgUnits: RadioGroup
     private lateinit var tilMetricUnitWeight: TextInputLayout
@@ -40,16 +38,6 @@ class BMIActivity : AppCompatActivity() {
         setContentView(R.layout.activity_bmiactivity)
 
         btnCalculateUnits = findViewById(R.id.btnCalculateUnits)
-
-        val actionBar = supportActionBar
-        if(actionBar != null){
-            actionBar.setDisplayHomeAsUpEnabled(true)
-            actionBar.title = "CALCULATE BMI"
-        }
-        toolbarBmiActivity.setNavigationOnClickListener {
-            onBackPressed()
-        }
-
         btnCalculateUnits.setOnClickListener{
 
             //checking current unit system

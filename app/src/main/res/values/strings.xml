@@ -6,6 +6,7 @@
 
     <string name="btn_login">Login</string>
     <string name="btn_sign_up">Sign Up</string>
+    <string name="logout">LOGOUT</string>
 
     <string name="edt_sign_up">Sign Up Now!</string>
     <string name="edt_name">Enter your Name</string>
@@ -56,6 +57,7 @@
     <string name="discover">DISCOVER</string>
     <string name="more">More workouts</string>
     <string name="settings">SETTINGS</string>
+    <string name="user_profile">USER PROFILE</string>
 
     <string name="complete_exercises">EXERCISES COMPLETED</string>
     <string name="no_history">NO DATA AVAILABLE. Please, Perform Workout to View History.</string>

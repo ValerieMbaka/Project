@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".BMIActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_bmi_activity"
-        android:layout_width="match_parent"
-        android:layout_height="?android:attr/actionBarSize"
-        app:titleTextColor="#FFFFFF"
-        android:background="#0535F1"/>
 
     <RadioGroup
         android:id="@+id/rgUnits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar_bmi_activity"
         android:layout_margin="10dp"
         android:background="@drawable/drawable_radio_group_tab_background"
         android:orientation="horizontal"
