@@ -1,6 +1,5 @@
 package com.example.myworkoutapp
 
-import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
