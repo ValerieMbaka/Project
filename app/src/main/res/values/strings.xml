@@ -25,8 +25,8 @@
     <string name="home_title">HOME WORKOUT</string>
     <string name="week_goal">WEEK GOAL</string>
 
-    <string name="full_body">FULL BODY</string>
-    <string name="lower_body">LOWER BODY</string>
+    <string name="full_body">FULL BODY WORKOUT</string>
+    <string name="lower_body">LOWER BODY WORKOUT</string>
     <string name="leg_workout">LEG WORKOUT</string>
     <string name="arm_workout">ARM WORKOUT</string>
     <string name="chest_workout">CHEST WORKOUT</string>
