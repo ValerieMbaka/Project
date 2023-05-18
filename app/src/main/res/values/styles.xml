@@ -2,4 +2,6 @@
 <resources>
 
     <style name="Circular">circular</style>
+
+    <style name="ToolbarTheme"></style>
 </resources>

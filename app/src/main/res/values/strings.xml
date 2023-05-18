@@ -52,6 +52,7 @@
     <string name="def">15.00</string>
     <string name="go">GO</string>
     <string name="history">VIEW HISTORY</string>
+    <string name="image">Exercise Image</string>
 
     <string name="training">TRAINING</string>
     <string name="report">Report</string>
@@ -64,5 +65,15 @@
     <string name="no_history">NO DATA AVAILABLE. Please, Perform Workout to View History.</string>
     <string name="date">DATE</string>
     <string name="num">1</string>
+    <string name="num_thirty">30</string>
+    <string name="num_ten">10</string>
+    <string name="get_ready">GET READY FOR</string>
+    <string name="new_exercise">New Exercise Name</string>
+    <string name="exercise_name">Exercise Name</string>
+    <string name="upcoming_exercise">UPCOMING EXERCISE : </string>
+    <string name="confirm_exit">Are you sure?</string>
+    <string name="exit_message">This will stop your workout, are you sure you want to quit?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 
 </resources>

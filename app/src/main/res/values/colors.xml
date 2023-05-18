@@ -9,6 +9,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="yellow">#FFC801</color>
     <color name="ttl">#F5F6F6</color>
+    <color name="colorAccent">#008F24</color>
+    <color name="textColor">#f20574</color>
+    <color name="colorHighLighted">#C4C4C4</color>
 
     <color name="app_title">#2196F3</color>
 
