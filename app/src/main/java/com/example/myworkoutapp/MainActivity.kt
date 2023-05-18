@@ -4,20 +4,21 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.cardview.widget.CardView
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
-    lateinit var cardTraining: CardView
-    lateinit var cardReport: CardView
-    lateinit var cardDiscover: CardView
-    lateinit var cardSettings: CardView
-    lateinit var cardExit: CardView
+    private lateinit var cardTraining: CardView
+    private lateinit var cardReport: CardView
+    private lateinit var cardDiscover: CardView
+    private lateinit var cardSettings: CardView
+    private lateinit var cardExit: CardView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         cardTraining = findViewById(R.id.cardTraining)
         cardTraining.setOnClickListener {
-            val exercise = Intent(this, ExerciseActivity::class.java)
+            val exercise = Intent(this, TrainingActivity::class.java)
             startActivity(exercise)
         }
 
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         cardExit.setOnClickListener {
             moveTaskToBack(true)
             android.os.Process.killProcess(android.os.Process.myPid())
-            System.exit(1)
+            exitProcess(1)
         }
     }
 }
