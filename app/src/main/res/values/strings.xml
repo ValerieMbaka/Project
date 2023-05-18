@@ -12,6 +12,7 @@
     <string name="edt_sign_up">Sign Up Now!</string>
     <string name="edt_name">Enter your Name</string>
     <string name="edt_sign_up_email">Type your Email</string>
+    <string name="email">EMAIL</string>
     <string name="edt_sign_up_password">Type your Password</string>
     <string name="edt_sign_up_password_retype">Retype Your Password</string>
     <string name="edt_registered">Already Registered , Sign In !</string>
@@ -60,6 +61,7 @@
     <string name="more">More workouts</string>
     <string name="settings">SETTINGS</string>
     <string name="user_profile">USER PROFILE</string>
+    <string name="logged_in">You logged in as</string>
 
     <string name="complete_exercises">EXERCISES COMPLETED</string>
     <string name="no_history">NO DATA AVAILABLE. Please, Perform Workout to View History.</string>

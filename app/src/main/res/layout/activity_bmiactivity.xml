@@ -251,7 +251,7 @@
 
         <Button
             android:id="@+id/btnExit"
-            android:layout_width="150dp"
+            android:layout_width="130dp"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:layout_marginStart="@dimen/_85sdp"
