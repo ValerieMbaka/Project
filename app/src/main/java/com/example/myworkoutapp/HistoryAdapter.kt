@@ -5,6 +5,8 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 /**
@@ -13,12 +15,19 @@ import androidx.recyclerview.widget.RecyclerView
  * HistoryAdapter class is for displaying the past workout history in the context of History screen
  */
 
-class HistoryAdapter(val context : Context , val items: ArrayList<String>):
-    RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
+class HistoryAdapter(
+    private val context : Context ,
+    private val items: ArrayList<String>
+    ): RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
-        val llHistoryItem = view.ll_history_item_main
-        val tvItem = view.tvItem
-        val tvPosition = view.tvPosition
+        val llHistoryItem: LinearLayout
+        val tvItem: TextView
+        val tvPosition: TextView
+        init {
+            llHistoryItem = view.findViewById(R.id.historyItemMain)
+            tvItem = view.findViewById(R.id.mTvItem)
+            tvPosition = view.findViewById(R.id.mTvPosition)
+        }
     }
 
     /**
@@ -37,14 +46,14 @@ class HistoryAdapter(val context : Context , val items: ArrayList<String>):
      *
      * Binds each item in the ArrayList to a View
      *
-     * Called when RecyclerView needs a new {@link ViewHodler} of given item type
+     * Called when RecyclerView needs a new {@link ViewHolder} of given item type
      *
      * This new ViewHolder should be constructed with a new View that can represent of given type.
      * Can either create a new View manually or inflate a layout file.
      */
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val date : String = items.get(position)
+        val date : String = items[position]
 
         //Note : array data is store from position 1 and not from 0
         holder.tvPosition.text = (position + 1).toString()
@@ -62,7 +71,7 @@ class HistoryAdapter(val context : Context , val items: ArrayList<String>):
         }
     }
 
-    //Gets the number of otems in the list
+    //Gets the number of items in the list
     override fun getItemCount(): Int {
         return items.size
     }

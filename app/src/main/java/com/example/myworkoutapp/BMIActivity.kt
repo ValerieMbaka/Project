@@ -1,5 +1,6 @@
 package com.example.myworkoutapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -55,6 +56,10 @@ class BMIActivity : AppCompatActivity() {
                     Toast.makeText(this@BMIActivity,"Please enter valid values." , Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+        binding.btnExit.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         //making units system visible

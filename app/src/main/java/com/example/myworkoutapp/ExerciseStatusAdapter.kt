@@ -2,13 +2,12 @@ package com.example.myworkoutapp
 
 import android.content.Context
 import android.graphics.Color
-import android.graphics.Color.parseColor
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.item_exercise_status.view.*
 
 /**
  * ExerciseStatusAdapter : Adapters provide a binding from an app-specific data set to views that are displayed
@@ -22,11 +21,14 @@ import kotlinx.android.synthetic.main.item_exercise_status.view.*
  */
 
 
-class ExerciseStatusAdapter(val context: Context, val items:ArrayList<ExerciseModel>) : RecyclerView.Adapter<ExerciseStatusAdapter.ViewHolder>() {
+class ExerciseStatusAdapter(val context: Context, private val items:ArrayList<ExerciseModel>) : RecyclerView.Adapter<ExerciseStatusAdapter.ViewHolder>() {
 //So the view Holder describes an item view and metadata about its place
 // within the recycle of you.
     class ViewHolder(view : View) : RecyclerView.ViewHolder(view){
-        val tvItem = view.tvItem
+        val tvItem: TextView
+        init {
+            tvItem = view.findViewById(R.id.mTvItem)
+        }
     }
 
     //onCreateViewHolder only creates a new view holder when there are
