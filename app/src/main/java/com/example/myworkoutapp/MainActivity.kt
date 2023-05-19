@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         cardTraining = findViewById(R.id.cardTraining)
         cardTraining.setOnClickListener {
-            val exercise = Intent(this, TrainingActivity::class.java)
+            val exercise = Intent(this, WorkoutActivity::class.java)
             startActivity(exercise)
         }
 
