@@ -18,8 +18,8 @@ class SettingsActivity : AppCompatActivity() {
         user = FirebaseAuth.getInstance()
 
         binding.cardProfile.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
+            val profile = Intent(this, ProfileActivity::class.java)
+            startActivity(profile)
         }
 
         binding.cardLogin.setOnClickListener {

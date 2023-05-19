@@ -1,17 +1,16 @@
 package com.example.myworkoutapp
 
 import android.app.Dialog
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Window
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import com.example.myworkoutapp.databinding.ActivityProfileBinding
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 
@@ -20,10 +19,9 @@ class ProfileActivity : AppCompatActivity() {
     private lateinit var actionBar: ActionBar
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var databaseReference:DatabaseReference
-    private lateinit var storageReference:StorageReference
+    private lateinit var storageReference: StorageReference
+    private lateinit var imageUri:Uri
     private lateinit var dialog: Dialog
-    private lateinit var user: User
-    private lateinit var uid:String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,33 +32,48 @@ class ProfileActivity : AppCompatActivity() {
         actionBar.title = "User Profile"
 
         firebaseAuth = FirebaseAuth.getInstance()
-        uid = firebaseAuth.currentUser?.uid.toString()
-
+        val uid = firebaseAuth.currentUser?.uid
         databaseReference = FirebaseDatabase.getInstance().getReference("Users")
-        if (uid.isNotEmpty()){
-            getUserData()
+
+        binding.btnSave.setOnClickListener {
+            showProgressBar()
+
+            val firstName = binding.mTvUserFirstName.text.toString()
+            val lastName = binding.mTvUserLastName.text.toString()
+            val email = binding.mTvUserEmail.text.toString()
+
+            val user = User(firstName, lastName, email)
+            if (uid != null){
+                databaseReference.child(uid).setValue(user).addOnCompleteListener {
+
+                    if (it.isSuccessful){
+
+                        uploadProfilePic()
+
+                    }else{
+                        hideProgressBar()
+                        Toast.makeText(this, "Failed to update profile", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         }
-
     }
-    private fun getUserData(){
-        showProgressBar()
-        databaseReference.child(uid).addValueEventListener(object : ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                user = snapshot.getValue(User::class.java)!!
-                binding.mTvUserName.setText(user.firstName+""+user.lastName)
-                binding.mTvUserEmail.setText(user.email)
+    private fun uploadProfilePic(){
+        imageUri = Uri.parse("android.resource://$packageName/${R.drawable.profile_pic}")
+        storageReference = FirebaseStorage.getInstance().getReference("Users/"+firebaseAuth.currentUser?.uid)
+        storageReference.putFile(imageUri).addOnSuccessListener {
 
-            }
+            hideProgressBar()
+            Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
 
-            override fun onCancelled(error: DatabaseError) {
-                hideProgressBar()
-            }
-        })
+        }.addOnFailureListener{
+
+            hideProgressBar()
+            Toast.makeText(this, "Failed to update profile", Toast.LENGTH_SHORT).show()
+
+        }
     }
-    private fun showUserProfile(){
-        storageReference = FirebaseStorage.getInstance().reference.child("Users/$uid.jpg")
 
-    }
     private fun showProgressBar(){
         dialog = Dialog(this)
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -68,7 +81,9 @@ class ProfileActivity : AppCompatActivity() {
         dialog.setCanceledOnTouchOutside(false)
         dialog.show()
     }
+
     private fun hideProgressBar(){
         dialog.dismiss()
     }
+
 }

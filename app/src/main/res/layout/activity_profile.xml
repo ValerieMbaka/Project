@@ -16,21 +16,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:id="@+id/mTvUserName"
+        android:hint="@string/first_name"
+        android:id="@+id/mTvUserFirstName"
         android:textSize="30sp"
-        android:fontFamily="cursive"
         android:layout_marginTop="20dp"/>
 
 
     <TextView
-        android:id="@+id/mTvUserEmail"
+        android:id="@+id/mTvUserLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:hint="@string/last_name"
         android:textSize="30sp"
-        android:fontFamily="cursive"
         android:layout_marginTop="20dp"/>
 
+    <TextView
+        android:id="@+id/mTvUserEmail"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:layout_marginTop="15dp"/>
 
 </LinearLayout>
