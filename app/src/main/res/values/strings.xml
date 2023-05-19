@@ -13,6 +13,7 @@
     <string name="edt_name">Enter your Name</string>
     <string name="edt_sign_up_email">Type your Email</string>
     <string name="email">EMAIL</string>
+    <string name="name">Name</string>
     <string name="edt_sign_up_password">Type your Password</string>
     <string name="edt_sign_up_password_retype">Retype Your Password</string>
     <string name="edt_registered">Already Registered , Sign In !</string>
